@@ -615,6 +615,7 @@ background-color: var(--ocean);
   width: 264px;
   height: 40px;
   margin-right: 24px;
+  outline: transparent;
 }
 
 .ftr-subscribe-input::placeholder {
@@ -639,6 +640,12 @@ background-color: var(--ocean);
   border-radius: 4px;
   border-style: none;
   background: var(--IRIS, #4D5AE5);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ftr-subscribe-btn:hover,
+.ftr-subscribe-btn:focus {
+  background-color: var(--ocean);
 }
 
 .ftr-subscribe-icon {
@@ -654,9 +661,7 @@ background-color: var(--ocean);
 
 
 /* ---------- Desktop modal ---------- */
-.is-open {
-  opacity: 0;
-}
+
 
 .backdrop-modal {
   background-color: var(--navy-blue-modal);
@@ -665,6 +670,15 @@ background-color: var(--ocean);
   width: 100%;
   top: 0;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .desktop-modal {
@@ -674,6 +688,7 @@ background-color: var(--ocean);
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
+  min-height: 584px;
   padding: 24px;
   border-radius: 4px;
 }
@@ -687,6 +702,13 @@ background-color: var(--ocean);
   border-radius: 50%;
   border-style: none;
   padding: 8px;
+  transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  background-color: var(--ocean);
+  fill: var(--white);
 }
 
 .close-btn-icon {
@@ -708,30 +730,137 @@ background-color: var(--ocean);
 }
 
 .forms-container {
-
+  width: 100%;
 }
 
 .d-modal-label {
-  color: var(--navy-blue-modal);
+  color: var(--slate);
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.04em
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   display: block;
   margin-bottom: 4px;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
 .d-modal-input {
-  width: 360px;
-  height: 58px;
-  padding: 11px 16px;
+  width: 100%;
+  min-height: 58px;
+  padding-left: 38px;
+  padding-right: 16px;
   border-radius: 4px;
   border: 1px solid var(--navy-blue-modal);
   background-color: var(--dairy);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
+  outline: transparent;
 }
 
-.d-modal-input:focus-within {
+.d-modal-input:focus {
   border-color: var(--iris);
+}
+
+.input-icon {
+  position: absolute;
+  fill: var(--navy-blue);
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.d-modal-input:focus + .input-icon {
+  fill: var(--iris);
+}
+
+.d-modal-textarea {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--navy-blue-modal);
+  width: 100%;
+  min-height: 120px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--navy-blue-modal);
+  background-color: var(--dairy);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  resize: none;
+  margin-bottom: 16px;
+}
+
+.d-modal-textarea:focus {
+  border-color: var(--iris);
+}
+
+.d-checkbox-container {
+  margin-bottom: 24px;
+}
+
+.d-checkbox-label {
+  display: flex;
+  align-items: center;
+  color: var(--light-slate);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.d-checkbox-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 2px;
+  fill: transparent;
+  transition: background-color, border, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+}
+
+.d-checkbox-input:checked + .d-checkbox-label > .d-checkbox-style {
+  background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
+}
+
+.checkbox-style-icon {
+
+}
+
+.d-checkbox-link {
+  color: var(--iris);
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;  
+}
+
+.d-modal-btn {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--WHITE, #FFF);
+  background: var(--IRIS, #4D5AE5);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  min-width: 169px;
+  height: 56px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.d-modal-btn:hover,
+.d-modal-btn:focus {
+  background-color: var(--ocean);
 }
 /* ----------          ---------- */
