@@ -592,12 +592,11 @@ background-color: var(--ocean);
 }
 
 
-.ftr-subscribe-label {
+.ftr-subscribe-text {
   color: var(--white);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  display: block;
   margin-bottom: 16px;
 }
 
