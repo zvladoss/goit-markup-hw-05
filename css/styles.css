@@ -833,10 +833,8 @@ background-color: var(--ocean);
 .d-checkbox-container {
   margin-bottom: 24px;
 }
-
+ 
 .d-checkbox-label {
-  display: flex;
-  align-items: center;
   color: var(--light-slate);
   font-size: 12px;
   line-height: 1.17;
