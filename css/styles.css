@@ -734,6 +734,7 @@ background-color: var(--ocean);
 .close-btn:focus {
   background-color: var(--ocean);
   fill: var(--white);
+  border: none;
 }
 
 .close-btn-icon {
@@ -777,7 +778,6 @@ background-color: var(--ocean);
 .d-modal-input {
   width: 100%;
   height: 40px;
-  min-height: 58px;
   padding-left: 38px;
   padding-right: 16px;
   border-radius: 4px;
@@ -803,6 +803,11 @@ background-color: var(--ocean);
 .d-modal-input:focus + .input-icon {
   fill: var(--iris);
 }
+.textarea-container {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
 
 .d-modal-textarea {
   font-size: 12px;
