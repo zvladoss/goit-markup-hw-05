@@ -615,14 +615,14 @@ footer .logo {
 }
 
 .footer-subscribe-input {
-    font-size: 12px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 2;
   letter-spacing: 0.04em;
   color: var(--white);
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--white);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding-left: 16px;
   width: 264px;
   height: 40px;
@@ -661,7 +661,7 @@ footer .logo {
 }
 .footer-subscribe-icon {
   fill: var(--white);
-  margin-left: 16%;
+  margin-left: 16px;
 }
 
 /* #endregion */
@@ -685,7 +685,7 @@ footer .logo {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -723,7 +723,7 @@ footer .logo {
   right: 24px;
   background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 100%;
+  border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -754,6 +754,7 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 8px;
 }
 .d-modal-label {
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -764,6 +765,7 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 .d-modal-input {
+  background-color: transparent;
   border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
   width: 100%;
